@@ -1,0 +1,382 @@
+.App{
+  width: 100%;
+  height: 100vh;
+  font-size: 18px; /*全体の文字の大きさ*/
+  
+}
+
+header{
+  display: flex;
+  align-items: center;
+  height: 80px; /* 高さを画面全体に設定 */
+  flex-direction: column;
+  background-color: #FFFFFF;
+  color: #0b0b0b;
+  margin-bottom: 10px;
+
+  /* navをスクロールしている最中に固定*/
+  position: fixed; /* ナビゲーションバーを固定位置に配置 */
+  top: 0; /* 画面の上部に配置 */
+  width: 100%; /* 画面幅いっぱいに設定 */
+  z-index: 1000; /* 他の要素よりも手前に表示 */
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  height: 60%; /* 高さを画面全体に設定 */
+  background: linear-gradient(to top, rgba(128, 128, 128, 1), rgba(128, 128, 128, 0));
+  flex-direction: column;
+}
+
+.header2{
+  justify-content: space-between;
+  align-items: center;
+  display: flex; 
+  width: 80%;
+}
+
+.footer2{
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex; 
+  width: 80%;
+}
+
+header h3{
+  font-size: 130%;
+}
+
+h5{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+}
+
+
+
+.left-elements {
+  display: flex;
+  gap: 10px; /* 左寄せの要素間の間隔を設定 */
+  align-items: center;
+  width: 50%;
+}
+
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  font-family: serif;
+  padding-left: 20px;;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #020202;
+  font-size: 18px;
+  transition: all 0.2s;
+}
+
+nav ul li a:hover{
+  color: rgb(215, 129, 209);
+}
+
+
+.HeaderLogo{
+  max-width: 5%;
+  min-width: 50PX;
+}
+
+
+.FooterLogo {
+  max-width: 8%;
+  min-width: 60PX;
+}
+
+
+
+/*HOME*/
+
+.homeImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  min-width: 200px; /* 画像の最小幅を800pxに設定 */
+  width: 80%;
+  margin-top: 80px; /* ナビゲーションバーの高さ */
+}
+
+
+
+/*Sub*/
+.ContactSubImg,
+.RecruitSubImg{
+  margin-top: 80px;
+  display: block;
+  width: 30%;
+}
+
+
+
+
+/*Company*/
+
+.top{
+  margin-top: 10%;
+}
+
+.Company_section,
+.News_section,
+.Mission_section,
+.Member_section,
+.Contact_section,
+.Recruit_section{
+  display: block;
+  list-style: none;
+  margin-top: 14PX;
+  align-items: center;
+  width: 30%;
+}
+
+.Company,
+.News,
+.Mission,
+.Member,
+.Contact,
+.Recruit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Company_section li,
+.News_section li,
+.Mission_section li,
+.Member_section li,
+.Contact_section li,
+.Recruit_section li{
+  margin: 5px;
+  line-height: 160%;
+}
+
+.Section_img {
+  opacity: 0;
+  transform: translateX(-100%); /* 初期位置を左側の外側に設定 */
+  transition: opacity 1s ease, transform 1s ease; /* アニメーションの設定 */
+  display: block;
+  width: 26%;
+}
+
+.Section_img.show {
+  opacity: 1;
+  transform: translateX(0); /* 表示されるときに右に移動 */
+}
+
+
+
+
+
+.Contact_section,
+.Recruit_section,
+.Mission_section{
+  text-align: center;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo{
+  display: block; 
+  margin: 0 auto;
+  margin-top: 20%;
+}
+
+.Member_text{
+  margin: 0px;
+}
+
+.Member_section{
+  width: 30%;
+  padding: 20px; /* 内側の余白を設定 */
+  box-sizing: border-box; /* パディングとボーダーを含めた幅と高さを設定 */
+  word-wrap: break-word;
+}
+
+.svg{
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.empty {
+  white-space: pre; /* 要素内の空白をそのまま表示 */
+}
+
+div.anchor{
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+html {
+  scroll-behavior: smooth; /* パーマリンクをスムーズにする */
+}
+
+
+.Mission_title{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#top_empty{
+  margin-top: 20px;
+}
+
+
+/*form*/
+
+.required{
+  font-size: 12px;
+  display: inline-block;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 2px; /* 角を丸くする */
+  color: #333;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.wide-input {
+  margin-top: 5px;
+  width: 350px; /* 幅を適当なサイズに設定 */
+  background-color: #fefefe;
+  height: 30px; /* 高さを適当なサイズに設定 */
+  border: 1px solid #ccc; /* ボーダーの設定 */
+  border-width: 0.2px; /* 枠線の太さを薄くする */
+}
+
+
+.formText select {
+  width: 350px; /* 幅を指定 */
+  font-size: 14px; /* フォントサイズを大きくする */
+  text-align: center; /* テキストを中央寄せにする */
+}
+
+label,
+.formButton{
+  display: block; /* ブロック要素として表示 */
+  margin: 0 auto; /* 中央寄せ */
+}
+
+
+
+.ContactSub p{
+  margin: 100px 0px 20px 0px;
+  text-align: center;
+}
+
+.formButton{
+  margin-top: 40px;
+  margin-bottom: 140px;
+  width: 200px;
+  height: 40px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formText {
+  
+  max-width: 100%; /* フォーム全体の最大幅を設定 */
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){ /*レスポンシブデザイン*/
+
+  .App{
+    font-size: 16px; /*全体の文字の大きさ*/
+  }
+
+  header{
+    position: static;
+    height: 80%; /* 高さを画面全体に設定 */
+  }
+
+  .homeImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    width: 100%;
+  }
+
+ 
+
+  .Company_section,
+  .News_section,
+  .Mission_section,
+  .Member_section,
+  .Contact_section,
+  .Recruit_section,
+  .Section_img{
+    max-width: 100%;
+    min-width: 70%;
+    line-height: 150%;
+}   
+
+
+  .Company,
+  .News,
+  .Mission,
+  .Member,
+  .Contact,
+  .Recruit{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  nav{
+    display: block;
+        text-align: center;
+  }
+
+  nav li{
+    display: block;
+        padding: 4px;
+        font-size: 10px;
+  }
+
+  .left-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h3{
+    font-size: 130%;
+    min-width: 250px; /* 画像の最小幅を100pxに設定 */
+    margin-top: 0px;
+    text-align: center;
+  }
+
+
+  .Mission_title{
+    font-size: 24px;
+  }
+}
